@@ -1,0 +1,8 @@
+pe\com\comedorUPeU\core\dao\CoreDAO.class
+pe\com\comedorUPeU\core\dao\BaseDAOHibernate.class
+pe\com\comedorUPeU\core\domain\Person.class
+pe\com\comedorUPeU\core\dao\CoreDAOImpl.class
+pe\com\comedorUPeU\core\dao\MaintainDAO.class
+pe\com\comedorUPeU\core\domain\BaseEntity.class
+pe\com\comedorUPeU\core\dao\MaintainDAOImpl.class
+pe\com\comedorUPeU\core\domain\BaseType.class

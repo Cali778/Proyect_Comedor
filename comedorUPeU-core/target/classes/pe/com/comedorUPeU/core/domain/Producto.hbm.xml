@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 23/06/2012 10:38:16 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+	<class name="pe.com.comedorUPeU.core.domain.Producto" table="producto">
+		<id name="id" type="java.lang.Long">
+			<column name="id" />
+			<generator class="identity" />
+		</id>
+<!-- 		<version name="version" type="java.lang.Integer"> -->
+<!-- 			<column name="version" /> -->
+<!-- 		</version> -->
+
+		<property name="descripcionProducto" type="string">
+			<column name="descripcionProducto" length="30" />
+		</property>
+		<property name="tipoProducto" type="string">
+			<column name="tipoProducto" length="30" />
+		</property>
+		<property name="unidadMedida" type="string">
+			<column name="unidadMedida" length="20" />
+		</property>
+		<property name="comentario" type="string">
+			<column name="comentario" length="40" />
+		</property>
+        <many-to-one name="proveedor" class="pe.com.comedorUPeU.core.domain.Proveedor" lazy="false" fetch="select" 
+        			cascade="all">
+            <column name="proveedorId" />
+        </many-to-one>		
+<!-- typeDocument -->
+
+<!-- status -->
+        <many-to-one name="statusProducto" class="pe.com.comedorUPeU.core.domain.StatusProducto" lazy="false" fetch="select">
+            <column name="status" />
+        </many-to-one>		
+
+
+
+		<!-- auditory -->
+
+<!-- 		<property name="createdBy" type="string"> -->
+<!-- 			<column name="createdBy" length="20" /> -->
+<!-- 		</property> -->
+<!-- 		<property name="dateCreated" type="timestamp"> -->
+<!-- 			<column name="dateCreated" length="19" /> -->
+<!-- 		</property> -->
+<!-- 		<property name="dateLastUpdated" type="timestamp"> -->
+<!-- 			<column name="dateLastUpdated" length="19" /> -->
+<!-- 		</property> -->
+<!-- 		<property name="lastUpdatedBy" type="string"> -->
+<!-- 			<column name="lastUpdatedBy" length="20" /> -->
+<!-- 		</property> -->
+
+	</class>
+</hibernate-mapping>
